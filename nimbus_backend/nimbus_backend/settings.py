@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'authentication'
 ]
 
 MIDDLEWARE = [
@@ -78,6 +80,8 @@ WSGI_APPLICATION = 'nimbus_backend.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+
 import os
 import environ
 
@@ -95,7 +99,8 @@ DATABASES = {
     "default": env.db("DATABASE_URL")
 }
 
-
+# defining your custom User model
+AUTH_USER_MODEL = 'authentication.User'
 
 
 # Password validation
