@@ -1,10 +1,18 @@
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import TabSwitcher from "../components/TabSwitcher";
+import Features from "../components/Features";
+import Footer from "../components/Footer";
 const HomePage = () => {
-    return  (
-        <div className="bg-red-600">
-           <h1>HI this is setup for NIMBUS</h1>
-     
-        </div>
-    )
-}
+  return (
+    <>
+      <Navbar />
+        <Hero />
+        <TabSwitcher />
+      <Features/>
+      <Footer/>
+    </>
+  );
+};
 
 export default HomePage;
